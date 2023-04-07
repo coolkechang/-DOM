@@ -4,6 +4,8 @@ window.dom = {
         container.innerHTML = string.trim();
         return container.content.firstChild;
     },
+//template 标签 : 1.可以容纳任意元素；2.不能通过container.children[0]拿到 ; 要用container.content.firstChild;
+//string.trim() : trim 功能是将字符串两边的空格去掉
     after(node, node2){
         node.parentNode.insertBefore(node2, node.nextSibling);//用insertBefore的方法把node2插到node的下一个节点的前面，那也就是在node后面插个node2。即使node是最后一个也可以。
     },
